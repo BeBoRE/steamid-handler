@@ -1,0 +1,27 @@
+{
+  "name": "steamid-handler",
+  "version": "1.0.0",
+  "description": "Adds a SteamID class so Steam-IDs are easier to manipulate",
+  "main": "steamid-handler.js",
+  "scripts": {
+    "test": "exports.printMsg = function {console.log(\"This is a message from the demo package\")};"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotBeFoRE/steamid-handler.git"
+  },
+  "keywords": [
+    "steamid",
+    "class",
+    "before"
+  ],
+  "author": "Ayrton-Taede \"BeFoRE\" Tromp",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/dotBeFoRE/steamid-handler/issues"
+  },
+  "homepage": "https://github.com/dotBeFoRE/steamid-handler#readme",
+  "dependencies": {
+    "big-integer": "^1.6.28"
+  }
+}
