@@ -1,4 +1,5 @@
 bigInt = require('big-integer')
+const cppaddon = require('./build/Release/cppaddon');
 
 var Steamid = (function(undefined){
   "use strict"
@@ -104,7 +105,7 @@ var Steamid = (function(undefined){
       return this;
     }
     else {
-      throw "typeof key is not \"string\""
+      throw new Error("typeof key is not \"string\"");
     }
   }
 
@@ -114,12 +115,16 @@ var Steamid = (function(undefined){
 
   SteamID.prototype = Object.create(SteamIDContstructor.prototype)
 
-  Object.defineProperty(SteamID.prototype,'steam2',{get: function(){
+  Object.defineProperty(SteamID.prototype,'steam2old',{get: function(){
     var n = this.steam64;
     var firstbit = bigInt(n).and(1);
     var bit31 = bigInt(n).shiftRight(1).and(0x7FFFFFFF);
     var universe = bigInt(n).shiftRight(56).and(0xFF);
     return "STEAM_" + universe + ":" + firstbit + ":" + bit31;
+  }})
+
+  Object.defineProperty(SteamID.prototype,'steam2',{get: function(){
+    return cppaddon.toSteam2(this.steam64)
   }})
 
   Object.defineProperty(SteamID.prototype,'steam3',{get: function(){
@@ -128,9 +133,7 @@ var Steamid = (function(undefined){
 
   return SteamIDContstructor
 })();
-
-console.log(Steamid("76561197960287930").steam2)
-
+//
 // npm test
 if (typeof module !== "undefined" && module.hasOwnProperty("exports")) {
   module.exports = Steamid;
@@ -143,3 +146,4 @@ if ( typeof define === "function" && define.amd ) {
   });
 }
 
+//console.log(addon.toSteam2("76561198092541763"));
