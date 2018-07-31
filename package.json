@@ -20,5 +20,6 @@
   "homepage": "https://github.com/dotBeFoRE/steamid-handler#readme",
   "dependencies": {
     "big-integer": "^1.6.28"
-  }
+  },
+  "devDependencies": {}
 }

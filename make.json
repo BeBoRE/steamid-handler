@@ -1,0 +1,7 @@
+{
+    "name": "jsproject",
+    "src": "steamid-handler.js",
+    "output": "steamid-handler.min.js",
+    "includeReference": false,
+    "closure": {}
+}

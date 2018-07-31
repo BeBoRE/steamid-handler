@@ -1,0 +1,10 @@
+﻿  cppaddon.cc
+c:\users\ayrto\steamid-handler\src\cppaddon.cc(17): warning C4996: 'v8::String::Utf8Value::Utf8Value': was declared deprecated
+  c:\users\ayrto\.node-gyp\10.5.0\include\node\v8.h(2851): note: see declaration of 'v8::String::Utf8Value::Utf8Value'
+     Creating library C:\Users\ayrto\steamid-handler\build\Release\cppaddon.lib and object C:\Users\ayrto\steamid-handler\build\Release\cppaddon.exp
+  Generating code
+  2 of 123 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  cppaddon.vcxproj -> C:\Users\ayrto\steamid-handler\build\Release\\cppaddon.node
