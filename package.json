@@ -1,6 +1,6 @@
 {
   "name": "steamid-handler",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Adds a SteamID class so Steam-IDs are easier to manipulate",
   "main": "steamid-handler.js",
   "repository": {
